@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Count Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="calculatorLabel">Turn Count Calculator</div>
+  <div class="turncount-container">
+        <canvas id="turncountCanvas"></canvas>
+        <div id="startAngleIndicator"></div>
+        <div id="endAngleIndicator"></div>  
+    </div>
+
+    <div id="inputForm">
+       <label for="fullTurn">Full Turn (0 or more): </label>
+        <input type="number" id="fullTurn" min="0" placeholder="0">
+        <br>
+        <br> 
+        <label for="startAngle">Start Angle (0-90°): </label>
+        <input type="number" id="startAngle" min="0" max="90" placeholder="0">
+        <br>
+        <label for="endAngle">End Angle (0-90°): </label>
+        <input type="number" id="endAngle" min="0" max="90" placeholder="0">
+        <br>
+        <label for="startQuadrant">Start Quadrant (1-4): </label>
+        <input type="number" id="startQuadrant" min="1" max="4" placeholder="1">
+        <br>
+        <label for="endQuadrant">End Quadrant (1-4): </label>
+        <input type="number" id="endQuadrant" min="1" max="4" placeholder="1">
+        <br>
+        <button id="calculateButton">Calculate Turncount</button>
+    </div>
+  
+    <div id="result">
+        <p>Total Angle Displaced: <span id="totalAngleDisplaced">0</span></p>
+        <p>Partial Turn: <span id="partialTurn">0</span></p>
+        <p><b>Total Turn Count: <span id="totalTurnCount">0</span></b></p>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
